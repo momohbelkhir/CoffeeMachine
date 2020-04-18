@@ -20,7 +20,7 @@ public class CoffeeMachine {
 
 	public String makeCommand(Drink drink, int numberOfSugar, double money, boolean isExtra) {
 
-		   if ( money < MIN_MONEY || drink.getPrice()  > money) {
+		   if (drink.getPrice()  > money) {
 			 
 			 return "M: vous n'avez pas assez de crédit, il vous manque " + new BigDecimal((drink.getPrice() - money), MathContext.DECIMAL32) + "€"; 
 			 
